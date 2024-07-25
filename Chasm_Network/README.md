@@ -14,7 +14,7 @@ Static IP
 Static IP
 
 # راهنما 
-## ابتدا باید مقدار 1 توکن MNT داشته باشید و سپس به [این لینک بروید ](https://scout.chasm.net/private-mint) | بعد از مینت وارد [داشبورد خودتون](https://scout.chasm.net/dashboard) بشید 
+## ابتدا باید مقدار 1 توکن MNT داشته باشید و سپس به [این لینک بروید ](https://scout.chasm.net/private-mint) | بعد از مینت کردن NFT ،  وارد [داشبورد خودتون](https://scout.chasm.net/dashboard) بشید 
 
 ![image](https://github.com/user-attachments/assets/7e557437-88bc-48dc-bdb2-c03b5f99b3eb)
 
