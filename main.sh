@@ -25,7 +25,7 @@ do
     case $opt in
         "Allora_Node_TestNet")
             # Download and execute script for option 1
-            curl -O https://example.com/Allora_Node_TestNet.sh
+            curl -O https://raw.githubusercontent.com/xONEIROS/Crypto_nodes/main/Allora_Node_TestNet/Allora_Node_TestNet.sh
             chmod +x Allora_Node_TestNet.sh
             ./Allora_Node_TestNet.sh
             return_to_menu
@@ -33,7 +33,7 @@ do
             ;;
         "Chasm_Network")
             # Download and execute script for option 2
-            curl -O https://example.com/Chasm_Network.sh
+            curl -O https://raw.githubusercontent.com/xONEIROS/Crypto_nodes/main/Chasm_Network/Chasm_Network.sh
             chmod +x Chasm_Network.sh
             ./Chasm_Network.sh
             return_to_menu
