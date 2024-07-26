@@ -26,3 +26,42 @@ wget "https://raw.githubusercontent.com/xONEIROS/Crypto_nodes/main/main.sh" -O m
 ```
 
 # عدد 2 برای نصب نود این پروژه است
+
+### دوستان این نود روی NAT ip vps ها کار نمیکنه باید پابلیک ای دی پداشته باشید ، میتونید ip v6 ( اگر سرورتون ساپورت میکنه فعال کنید ببرید پست دامنه )
+
+## اگر اروور زیر رو میبینید 
+```
+info Server running on port 3001
+debug Connecting to orchestrator at https://orchestrator.chasm.net
+46 |         ws.on("error", (error) => {
+47 |             throw new Error(`Handshake failed: ${error.message}\n${JSON.stringify(error, null, 2)}`);
+48 |         });
+49 |         ws.on("close", (code, reason) => {
+50 |             if (code !== 1000) {
+51 |                 throw new Error(`❌ Handshake with orchestrator at ${ORCHESTRATOR_URL} failed with error:\n${reason}`);
+                           ^
+error: ❌ Handshake with orchestrator at https://orchestrator.chasm.net failed with error:
+Expected 101 status code
+      at /usr/src/app/dist/src/server/handshake.js:51:23
+      at emit (node:events:180:48)
+      at ws:95:44
+```
+
+### مراحل زیر رو دنبال کنید
+
+```
+docker stop scout
+docker rm scout
+```
+```
+docker pull chasmtech/chasm-scout:0.0.4
+```
+```
+docker run -d --restart=always --env-file ./.env -p 3001:3001 --name scout chasmtech/chasm-scout:0.0.4
+```
+
+### حالا مجدد لاگ رو چک کنید باید ارورتون رفته باشه ، برای چک کردن لاگ از دستور زیر استفاده کنید
+```
+docker logs scout
+```
+
