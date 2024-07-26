@@ -27,9 +27,9 @@ wget "https://raw.githubusercontent.com/xONEIROS/Crypto_nodes/main/main.sh" -O m
 
 # عدد 2 برای نصب نود این پروژه است
 
-### دوستان این نود روی NAT ip vps ها کار نمیکنه باید پابلیک ای دی پداشته باشید ، میتونید ip v6 ( اگر سرورتون ساپورت میکنه فعال کنید ببرید پست دامنه )
+### دوستان این نود روی NAT ip vps ها کار نمیکنه باید پابلیک ای پی داشته باشید ، میتونید ip v6 ( اگر سرورتون ساپورت میکنه فعال کنید ببرید پشت دامنه )
 
-## اگر اروور زیر رو میبینید 
+# اگر اروور زیر رو میبینید 
 ```
 info Server running on port 3001
 debug Connecting to orchestrator at https://orchestrator.chasm.net
