@@ -47,7 +47,7 @@ Expected 101 status code
       at ws:95:44
 ```
 
-### مراحل زیر رو دنبال کنید
+## مراحل زیر رو دنبال کنید ( راه حل اول )
 
 ```
 docker stop scout
@@ -64,4 +64,36 @@ docker run -d --restart=always --env-file ./.env -p 3001:3001 --name scout chasm
 ```
 docker logs scout
 ```
+
+## راه حل دوم 
+
+به سایت [nftok](https://ngrok.com/) بروید و ثبت نام کنید
+بعد از رورد از هدر بالا روی گزینه اوبونتو کلیک کنید
+![image](https://github.com/user-attachments/assets/a0fc304f-ab10-47bb-a552-0d1dd4d89848)
+
+حالا از پنجره زیر همونجا دستورات را به ترتیبی که در عکس علاما زدم کپی کنید
+![image](https://github.com/user-attachments/assets/75e79c1f-b83c-4490-90e7-35efd9837991)
+
+
+با دستور زیر یک اسکرین جدید بسازید 
+```
+screen -S ngrok
+```
+حالا دستور زیر را اجرا کنید
+```
+screen ngrok http 3001
+```
+بعدش یک چیزی مثل عکس زیر میبینید که باید لینکی که داخل کادر قرمز است رو کپی کنید ( مهمه یادتون نره )
+![image](https://github.com/user-attachments/assets/616c0dea-9b05-4993-b6f8-f260baf04e3f)
+حالا با زدن کلید های Crtl + A + D از این اسکرین بیاید بیرون
+حالا دستور `nano .env` ذا اجذا کنید . اون لینکی کپی کردید رو بزارید جلو `=WEBHOOK_URL` ( یعنی لینکی که هست رو پاک کنید و بعدش پیست کنید ، حالا با دستور crtl + x و بعدش Y و اینتر فایل رو سیو کنید و ببندید
+حالا کافیه دستورات زیر رو اجرا کنید
+```
+docker stop scout
+docker rm scout
+docker run -d --restart=always --env-file ./.env -p 3001:3001 --name scout johnsonchasm/chasm-scout
+```
+## تمام ، بعد از 10 15 دقیقه بهتون توی سایت زرد میشه و حدودا یکی دو ساعت بعدش سبز 
+
+اگر دوست داشتید مارو هم یک ستاره ای فورکی لایکی چیزی کنید :))))))))))))))))
 
